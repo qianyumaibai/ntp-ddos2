@@ -9,7 +9,7 @@ import os
 app = Flask(__name__)
 
 # 配置 Flask 监听的端口
-PORT = 5000
+PORT = 43658
 
 def generate_screen_name(prefix="ntp_", length=8):
     """生成一个随机的 screen 名称"""
