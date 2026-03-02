@@ -5,14 +5,14 @@ echo -e "\033[31mWelcome to install ntp ddos\033[0m"
 
 # Download files
 echo "Downloading ntp.c..."
-wget https://raw.githubusercontent.com/Meatbuns666/ntp-ddos/refs/heads/main/ntp.c -O ntp.c
+wget https://raw.githubusercontent.com/qianyumaibai/ntp-ddos2/refs/heads/main/ntp.c -O ntp.c
 if [ $? -ne 0 ]; then
     echo "Failed to download ntp.c"
     exit 1
 fi
 
 echo "Downloading ntpamp.txt..."
-wget https://raw.githubusercontent.com/Meatbuns666/ntp-ddos/refs/heads/main/ntpamp.txt -O ntpamp.txt
+wget https://raw.githubusercontent.com/qianyumaibai/ntp-ddos2/refs/heads/main/ntpamp.txt -O ntpamp.txt
 if [ $? -ne 0 ]; then
     echo "Failed to download ntpamp.txt"
     exit 1
@@ -39,7 +39,7 @@ fi
 
 # Download ddos.py
 echo "Downloading ddos.py..."
-wget https://raw.githubusercontent.com/Meatbuns666/ntp-ddos/refs/heads/main/ddos.py -O ddos.py
+wget https://raw.githubusercontent.com/qianyumaibai/ntp-ddos2/refs/heads/main/ddos.py -O ddos.py
 if [ $? -ne 0 ]; then
     echo "Failed to download ddos.py"
     exit 1
